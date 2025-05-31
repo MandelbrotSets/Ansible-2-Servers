@@ -1,0 +1,15 @@
+---
+- name: Ensure user Nightcrawler is present
+  hosts: servers
+  become: yes
+
+  tasks:
+    - name: Create a user
+      user:
+        name: Nightcrawler
+        state: present
+        comment: "New User"
+        groups: "sudo"  # Changed from wheel to sudo
+        append: yes     # Important to keep existing groups
+        create_home: yes
+        shell: /bin/bash

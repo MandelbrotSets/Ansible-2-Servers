@@ -1,0 +1,6 @@
+[servers]
+Ansi1 ansible_host=54.90.197.66 ansible_ssh_private_key_file=~/Downloads/ans1.pem
+Ansi2 ansible_host=54.144.29.144 ansible_ssh_private_key_file=~/Downloads/ans2.pem
+
+[servers:vars]
+ansible_user=ubuntu
